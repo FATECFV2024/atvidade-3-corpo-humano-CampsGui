@@ -3,12 +3,14 @@ package main.java;
 public class CorpoHumano {
   private float massa;
   private float volume;
-  private float altura;
+  private double altura;
+  private float densidade;
 
-  public CorpoHumano(float massa, float volume, float altura) {
+  public CorpoHumano(float massa, float volume, double altura, float densidade) {
       this.massa = massa;
       this.volume = volume;
       this.altura = altura;
+      this.densidade = densidade;
   }
 
   public float getMassa() {
@@ -19,8 +21,12 @@ public class CorpoHumano {
       return volume;
   }
 
-  public float getAltura() {
+  public double getAltura() {
       return altura;
+  }
+
+  public float getDensidade() {
+      return densidade;
   }
 
   public void setMassa(float massa) {
@@ -31,11 +37,15 @@ public class CorpoHumano {
       this.volume = volume;
   }
 
-  public void setAltura(float altura) {
+  public void setAltura(double altura) {
       this.altura = altura;
   }
 
-  public float calcularIMC() {
+  public void setDensidade(float densidade) {
+      this.densidade = densidade;
+  }
+
+  public double calcularIMC() {
       return massa / (altura * altura);
   }
 }
