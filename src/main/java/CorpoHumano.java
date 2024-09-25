@@ -50,4 +50,3 @@ public class CorpoHumano {
       return massa / (altura * altura);
   }
 }
-
